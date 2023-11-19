@@ -9,7 +9,7 @@ function Roteamento() {
     <Router>
       <Routes>
         <Route exact path="/" element={<App/>} />
-        <Route path="/addTarefa" element={<AddTarefa/>} /> 
+        <Route path="/AddTarefa" element={<AddTarefa/>} /> 
       </Routes>
     </Router>
   );

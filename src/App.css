@@ -17,8 +17,11 @@
 }
 
 .App-header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 45%;
 }
 
 .App-header hr {
@@ -33,4 +36,28 @@
 
 .tarefas {
   margin-left: 6%;
+}
+
+.adicionarTarefas {
+  text-align: center;
+}
+
+.adicionarTarefas input {
+  text-align: center;
+  width: 35%;
+}
+
+.adicionarTarefas button {
+  width: 36%;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.adicionarTarefas button:hover {
+  background-color: black;
+  color: white;
 }

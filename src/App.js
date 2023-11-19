@@ -1,9 +1,25 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import api from "./api";
+import axios from "axios";
 
 function App() {
   const [tarefas, setTarefas] = useState([]);
+  const [novoNome, setNome] = useState("");
+  const [novaDescricao, setDescricao] = useState("");
+  const [novoHorario, setHorario] = useState("");
+  const [novoLugar, setLugar] = useState("");
+
+  const criarTarefa = async () => {
+    await axios.post("http://127.0.0.1:8000/api/tarefas/", {
+      nome_da_tarefa: novoNome,
+      descricao_da_tarefa: novaDescricao,
+      horario_da_tarefa: novoHorario,
+      lugar_da_tarefa: novoLugar,
+    });
+
+    window.location.href = "/";
+  };
 
   const gerenciadorTarefas = async () => {
     try {
@@ -25,9 +41,9 @@ function App() {
 
         <table border="black" width="100%">
           <tr>
-            <th>
-              <a href="/addTarefa">Adicionar tarefa</a>
-            </th>
+            <td>
+              <a href="/AddTarefa">Adicionar tarefa</a>
+            </td>
           </tr>
         </table>
         <table border="black" width="100%">
@@ -75,6 +91,16 @@ function App() {
             </td>
           </tr>
         </table>
+
+        <br />
+        <div className="adicionarTarefas">
+          <h3>Adicione mais tarefas</h3>
+          <input type="text" placeholder="nome da tarefa" onChange={(e) => setNome(e.target.value)} /> <br />
+          <input type="text" placeholder="descricao da tarefa" onChange={(e) => setDescricao(e.target.value)}/> <br />
+          <input type="text" placeholder="horario da tarefa" onChange={(e) => setHorario(e.target.value)} /> <br />
+          <input type="text" placeholder="lugar da tarefa" onChange={(e) => setLugar(e.target.value)} /> <br />
+          <button onClick={criarTarefa} type="submit">Enviar</button>
+        </div>
       </header>
     </div>
   );

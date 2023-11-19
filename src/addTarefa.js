@@ -8,7 +8,7 @@ function AddTarefa() {
             <input type="text" placeholder="descricao da tarefa"/>
             <input type="text" placeholder="horario da tarefa"/>
             <input type="text" placeholder="lugar da tarefa"/>
-            <button type="submit">Enviar</button>
+            <button></button>
         </div>
     )
 }
