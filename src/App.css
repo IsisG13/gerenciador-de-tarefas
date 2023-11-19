@@ -1,0 +1,36 @@
+.App-header {
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: #000000;
+}
+
+.App-header h3 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.App-header p{
+   font-size: 19px;
+}
+
+.App-header a {
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.App-header hr {
+  width: 95%;
+  margin-left: 1%;
+}
+
+.App-header ul li p {
+  font-weight: bold;
+  color: #303030;
+}
+
+.tarefas {
+  margin-left: 6%;
+}
