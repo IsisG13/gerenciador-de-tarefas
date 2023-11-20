@@ -12,8 +12,8 @@
   margin-bottom: 2%;
 }
 
-.App-header p{
-   font-size: 19px;
+.App-header p {
+  font-size: 19px;
 }
 
 .App-header a {
@@ -35,7 +35,8 @@
 }
 
 .tarefas {
-  margin-left: 6%;
+  text-align: center;
+  /* margin-left: 6%; */
 }
 
 .adicionarTarefas {
@@ -45,14 +46,29 @@
 .adicionarTarefas input {
   text-align: center;
   width: 35%;
+  height: 28px;
 }
 
+.adicionarTarefas input:hover {
+  border-color: #303030;
+}
+
+.adicionarTarefas ::placeholder {
+  color: #161616;
+}
+
+.adicionarTarefas button:hover {
+  width: 38%;
+  height: 30px;
+}
 .adicionarTarefas button {
-  width: 36%;
+  margin-bottom: 1%;
+  width: 35.5%;
   height: 30px;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
+  text-transform: uppercase;
   background-color: white;
   border: 1px solid gray;
 }
@@ -60,4 +76,9 @@
 .adicionarTarefas button:hover {
   background-color: black;
   color: white;
+}
+
+.nome_tarefa {
+  text-transform: uppercase;
+  font-weight: bold;
 }

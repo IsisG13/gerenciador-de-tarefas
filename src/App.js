@@ -38,14 +38,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h3>Gerenciador de tarefas</h3>
-
-        <table border="black" width="100%">
-          <tr>
-            <td>
-              <a href="/AddTarefa">Adicionar tarefa</a>
-            </td>
-          </tr>
-        </table>
         <table border="black" width="100%">
           <tr>
             <th>Nome da tarefa</th>
@@ -57,7 +49,7 @@ function App() {
             <td>
               {tarefas.map((tarefas) => (
                 <div key={tarefas.id}>
-                  <p className="tarefas">{tarefas?.nome_da_tarefa}</p>
+                  <p className="tarefas nome_tarefa">{tarefas?.nome_da_tarefa}</p>
                   <br />
                 </div>
               ))}
@@ -95,11 +87,33 @@ function App() {
         <br />
         <div className="adicionarTarefas">
           <h3>Adicione mais tarefas</h3>
-          <input type="text" placeholder="nome da tarefa" onChange={(e) => setNome(e.target.value)} /> <br />
-          <input type="text" placeholder="descricao da tarefa" onChange={(e) => setDescricao(e.target.value)}/> <br />
-          <input type="text" placeholder="horario da tarefa" onChange={(e) => setHorario(e.target.value)} /> <br />
-          <input type="text" placeholder="lugar da tarefa" onChange={(e) => setLugar(e.target.value)} /> <br />
-          <button onClick={criarTarefa} type="submit">Enviar</button>
+          <input
+            type="text"
+            placeholder="nome da tarefa"
+            onChange={(e) => setNome(e.target.value)}
+          />{" "}
+          <br />
+          <input
+            type="text"
+            placeholder="descricao da tarefa"
+            onChange={(e) => setDescricao(e.target.value)}
+          />{" "}
+          <br />
+          <input
+            type="text"
+            placeholder="horario da tarefa"
+            onChange={(e) => setHorario(e.target.value)}
+          />{" "}
+          <br />
+          <input
+            type="text"
+            placeholder="lugar da tarefa"
+            onChange={(e) => setLugar(e.target.value)}
+          />{" "}
+          <br />
+          <button onClick={criarTarefa} type="submit">
+            Enviar
+          </button>
         </div>
       </header>
     </div>
